@@ -1,0 +1,32 @@
+.navbar.fixed.left + .container{
+			padding-left: 160px;
+		}
+		.navbar-fixed-left{
+			width: 140px;
+			position: fixed;
+			height: 100%;
+			padding-top: 
+		}
+		.jumbotron{
+			color: #2c3e50;
+			background: #ecf0f1;
+		}
+		.navbar-fixed-left .navbar-nav > li > .dropdown-menu{
+			margin-top: -40px;
+			margin-left: 140px;
+		}
+		.dropdown-item{
+			margin: 22px;
+		}
+
+		pre, code {
+  font-family: monospace, monospace;
+}
+pre {
+  overflow: auto;
+}
+pre > code {
+  display: block;
+  padding: 1rem;
+  word-wrap: normal;
+}

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="tech_style.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-left">
+		<div class="container-fluid">
+  
+  
+  
+    <ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#one">HTML Structures</a>
+      </li>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Navbar Components
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#three">Navbar Container</a><hr>
+          <a class="dropdown-item" href="#four">Navbar Header</a><hr>
+          <a class="dropdown-item" href="#five">Navbar Collapse</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Navbar Utilities</a>
+      </li>
+    </ul>
+
+</div>
+</nav>
+
+
+
+<div class="container">
+	<div class="jumbotron">
+		<h2 style="text-align: center;
+		}"><b>Bootstrap Navbar Tutorial</b></h2>
+	</div>
+</div>
+
+
+<div class="container">
+<div class="jumbotron" style="background: white;margin-left: 130px;text-align: center;">
+<div class="row">
+	<div class="col-lg-12">
+		<p>Today I'd like to show you how to create a bootstrap navbar, adjust it to your needs and tweak its behaviour.
+
+In this tutorial and guide, we will explore in detail all the navbar components and how to properly use every of them. We'll also discuss common problems that coders face while implementing Bootstrap's navbars.
+
+At the end of the article, we will also use some CSS and jQuery tricks to enhance the basic navbar structure and apply some advanced tweaks to our navbar to enhance the user experience on your website.
+
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<div id="one" style="margin-left: 175px;">
+		<h2>1. HTML Structures</h2>
+	    </div>
+	</div>
+</div>
+<hr>
+
+<p style="margin-left: 200px;font-size: 20px;">Let's first discuss the structure of the navbar element, piece by piece, and explain what does every component exactly do.</p>
+
+
+<div class="container">
+<div class="jumbotron" style="background: white;margin-left: 130px;">
+<div class="row">
+	<div class="col-lg-12">
+
+  <pre>
+    <code>
+     &lt;&lt;nav class="navbar navbar-default navbar-fixed-top"&gt;
+   &lt;div class="container"&gt;
+&lt;div class="navbar-header"&gt;
+             
+        &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#exampleNavComponents" aria-expanded"false"&gt;
+                &lt;i class="glyphicon glyphicon-align-center"&gt;&lt;/i&gt;
+            &lt;/button&gt;
+
+            
+            &lt;a href="#" class="navbar-brand"&gt;
+                Bootstrap Navbar
+            &lt;/a&gt;
+        &lt;/div&gt;
+
+
+         
+        &lt;div class="collapse navbar-collapse" id="exampleNavComponents"&gt;
+
+         
+            &lt;ul class="nav navbar-nav navbar-right"&gt;
+                &lt;li class="active"&gt;
+                    &lt;a href="#"&gt;Page 1&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;Page 2&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;Page 3&lt;/a&gt;
+                &lt;/li&gt;
+                
+                &lt;li class="dropdown"&gt;
+                    &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&gt;Dropdown
+                        &lt;span class="caret"&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;ul class="dropdown-menu"&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+
+          
+            &lt;form action="#" class="navbar-form"&gt;
+                &lt;div class="form-group"&gt;
+                    &lt;input type="text" class="form-control" placeholder="Search"&gt;
+                &lt;/div&gt;
+                &lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
+            &lt;/form&gt;
+
+         
+            &lt;button type="button" class="btn btn-default navbar-btn navbar-right"&gt;Sign in&lt;/button&gt;
+
+            
+             &lt;p class="navbar-text"&gt;Signed in as Mark Otto&lt;/p&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt; 
+
+    &lt;/code&gt;
+  &lt;/pre&gt;
+
+
+</code>
+</pre>
+
+</div>
+</div>
+</div>
+</div>
+<br><br>
+<p style="margin-left: 200px;font-size: 20px;">What is navbar?
+
+Navbars are responsive meta components that serve as navigation headers for your application or site. They begin collapsed (and are toggleable) on mobile devices and become horizontal blocks as the available viewport width increases.</p>
+
+<br><br>
+
+<p style="font-size: 20px;margin-left: 200px">To make your navbar accessible be sure to use &lt;nav&gt; element for the navbar parent element. If you prefer to use a generic element such as &lt;div&gt;, add a role="navigation" to every navbar too. That's due to identifying it as a landmark region for users of assistive technologies.</p>
+
+
+<div class="row">
+	<div class="col-lg-12">
+		<div id="two" style="margin-left: 175px;">
+		<h2>2. Navbar Components</h2>
+	    </div>
+	</div>
+</div>
+
+<br>
+<p id="three" style="font-size: 20px;margin-left: 180px"><b>1. Navbar Container</b><br>
+Bootstrap navbar uses .container-fluid by default, it should be included right behing the parent element (nav.navbar) and wrap all navbar contents.
+
+You have the freedom to use .container-fluid or .container div, it depends on the width you need, no limitations.
+
+</p>
+<hr>
+<p id="four" style="font-size: 20px;margin-left: 180px"><b>2. Navbar Header</b><br>
+.navbar-header is the second one main components of the navbar. It wraps both navbar brand and navbar toggle button and renders them properly.
+
+Let's see what navbar brand and navbar toggle button do.
+</p>
+
+
+
+
+
+<div class="container">
+<div class="jumbotron" style="background: white;margin-left: 80px;">
+<div class="row">
+	<div class="col-lg-12 col-md-6">
+
+  <pre>
+    <code>
+    	<!-- Navbar Brand [with text]-->
+&lt;a href="#" class="navbar-brand"&gt;
+    My Awesome Logo
+&lt;/a&gt;
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<p style="font-size: 20px;margin-left: 180px"><b>OR an image like this:</b><br>
+
+</p>
+
+
+
+<div class="container">
+<div class="jumbotron" style="background: white;margin-left: 80px;">
+<div class="row">
+	<div class="col-lg-12">
+
+  <pre>
+    <code>
+    	<!-- Navbar Brand [with text]-->
+&lt;a href="#" class="navbar-brand"&gt;
+      &lt;img src="logo.png" alt="brand"&gt;
+&lt;/a&gt;
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<p style="font-size: 20px;margin-left: 180px"><b>2.2 Navbar Toggle Button</b><br><br>
+This button handles collapsing the navbar content on mobile screens. Whatever you put in your navbar (except navbar brand) will be hidden by default on mobile screens. This toggle button will bring them back to you when you click it.
+
+In simple words, when you transfer to a mobile screen, the only visible pieces will be the navbar brand and the toggle button. When you click the toggle button, the other stuff appears.
+
+The button itself is hidden on larger screens. By default, it's hidden on screens larger than 768px. You can change this value, we'll discuss this later on.
+
+Let's explain the structure:
+</p>
+
+
+<div class="container">
+<div class="jumbotron" style="background: white;margin-left: 80px;">
+<div class="row">
+	<div class="col-lg-12">
+
+  <pre>
+    <code>
+    &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#exampleNavComponents" aria-expanded"false"&gt;
+    &lt;i class="glyphicon glyphicon-align-center">&lt;/i&gt;
+&lt;/button&gt;          
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<p style="font-size: 20px;margin-left: 180px"><b>2.2 Navbar Toggle Button</b><br><br>
+Attributes of the navbar toggle button
+The button is defined by the two classes .navbar-toggle .collapsed.
+Be sure to add data-toggle="collapse", this attribute tells JavaScript that this it controls the collapsing behaviour.
+The previous data-toggle attribute needs to be accompanied with its target. The data-target="" should contain on the id of the box wrapping the hidden components. So if you'll wrap your components in a box with id="example", then data-target of the button should be data-target="#example".
+Next, the aria-expanded="" attribute defines the initial state of the hidden components. If it's false that means it's hidden, if true it's visible.
+The content of the button is up to you. You can use glyph icon for example, or an icon accompanied by the text, e.g. "Menu". In this case, we just used a bars glyph icon.
+</p>
+
+
+<div class="container" style="margin-left: 450px;">
+<img alt="Bootstrap navbar tutorial" class="img-responsive unveil" data-src="https://d1r27dnp1fh4g5.cloudfront.net/i/navbar-1.gif" src="https://d1r27dnp1fh4g5.cloudfront.net/i/navbar-1.gif" style="opacity: 1;">
+</div>
+
+<p id="five" style="font-size: 20px;margin-left: 180px"><b>3. Navbar Collapse</b><br><br>
+
+The navbar collapse is the component which wraps the remain components of the navbar, such as navbar menu, navbar buttons, forms... etc. In other words, it wraps all navbar components except .navbar-header.
+
+It's defined by the two classes .collapse navbar-collapse. This box should have an id, this id must be identical to the toggle button data-target="" value.
+
+Contrary to the navbar toggle button, navbar collapse is visible by default on larger screens and hidden on smaller ones. On smaller screens, it is switched from hidden to visible and vice versa by clicking navbar toggle button.
+
+Now, let's explore the navbar collapse's components.
+</p>
+
+
+<div class="container">
+<div class="jumbotron" style="background: white;margin-left: 80px;">
+<div class="row">
+	<div class="col-lg-12">
+
+  <pre>
+    <code>
+    &lt;!-- Navbar Menu --&gt;
+&lt;ul class="nav navbar-nav"&gt;
+    &lt;li class="active"&gt;
+        &lt;a href="#"&gt;Page 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#"&gt;Page 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#"&gt;Page 3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;!-- Navbar link with a dropdown menu --&gt;
+    &lt;li class="dropdown"&gt;
+        &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&gt;Dropdown
+            &lt;span class="caret"&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul class="dropdown-menu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;              
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<p style="font-size: 20px;margin-left: 180px"><b>3.1 Navbar Menu</b><br><br>
+Navbar Menu is the element that wraps the navbar links. It is an ul defined by the two classes: .nav navbar-nav.
+
+One of its li children should have an .active class to mark that it is the link to the current page.
+
+You can also include dropdowns inside the navbar menu. To include a dropdown, you should follow the structure as shown below.
+</p>
+
+
+<div class="container">
+<div class="jumbotron" style="background: white;margin-left: 80px;">
+<div class="row">
+	<div class="col-lg-12">
+
+  <pre>
+    <code>
+    &lt;!-- Link with a dropdown menu --&gt;
+&lt;li class="dropdown"&gt;
+    &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&gt;Dropdown
+        &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/li&gt;                
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<p style="font-size: 20px;margin-left: 180px"><b>3.2 Navbar Forms</b><br><br>
+The navbar collapse is the component which wraps the remain components of the navbar, such as navbar menu, navbar buttons, forms... etc. In other words, it wraps all navbar components except .navbar-header.
+
+It's defined by the two classes .collapse navbar-collapse. This box should have an id, this id must be identical to the toggle button data-target="" value.
+
+Contrary to the navbar toggle button, navbar collapse is visible by default on larger screens and hidden on smaller ones. On smaller screens, it is switched from hidden to visible and vice versa by clicking navbar toggle button.
+
+Now, let's explore the navbar collapse's components.
+</p>
+
+
+
+<div class="container">
+<div class="jumbotron" style="background: white;margin-left: 80px;">
+<div class="row">
+	<div class="col-lg-12">
+
+  <pre>
+    <code>
+    &lt;!-- Navbar Form --&gt;
+&lt;form action="#" class="navbar-form"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="search-input" class="sr-only"&gt;search&lt;/label&gt;
+        &lt;input type="text" id="search-input" class="form-control" placeholder="Search"&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;                     
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<p style="font-size: 20px;margin-left: 180px">
+The second component you can use inside navbar collapse is a form. Use the forms with .navbar-form class for proper vertical alignment and collapsed behavior in narrow viewports.
+
+As a heads up, .navbar-form shares much of its code with .form-inline.
+
+It's advised to use labels for every input. Screen readers will have trouble with your forms if you don't include a label for every input. You can hide the labels using the .sr-only class.
+
+If no labels are present, screen readers may resort to using the placeholder attribute. If present, but note that use of placeholder as a replacement for other labeling methods is not advised.
+</p>
+<hr>
+
+<p style="font-size: 20px;margin-left: 180px"><b>3.3 Navbar Buttons</b></p>
+
+<div class="container">
+<div class="jumbotron" style="background: white;margin-left: 80px;">
+<div class="row">
+	<div class="col-lg-12">
+
+  <pre>
+    <code>
+    <!-- Navbar Button -->
+&lt;button type="button" class="btn btn-default navbar-btn navbar-right"&gt;Sign in&lt;/button&gt;                 
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<p style="font-size: 20px;margin-left: 180px">
+You can also add buttons to the navbar collapse by adding class .navbar-btn to &lt;button&gt; elements not residing in a &lt;form&gt;. This will center them vertically in the navbar.
+
+Like the standard button classes, .navbar-btn can be used on &lt;a&gt; and &lt;input&gt; elements. However, neither .navbar-btn nor the standard button classes should be used on &lt;a&gt; elements within .navbar-nav.
+</p>
+<hr>
+
+<p style="font-size: 20px;margin-left: 180px"><b>3.4 Navbar Text</b></p>
+
+<div class="container">
+<div class="jumbotron" style="background: white;margin-left: 80px;">
+<div class="row">
+	<div class="col-lg-12">
+
+  <pre>
+    <code>
+  
+<!-- Navbar Text -->
+&lt;p class="navbar-text"&gt;Signed in as Mark Otto&lt;/p&gt; 
+
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<p style="font-size: 20px;margin-left: 180px">
+Also, you can add texts to your navbar in any element with class .navbar-text. It is usually used on a &lt;p&gt; tag for proper leading and color.
+
+
+</p>
+<hr>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
